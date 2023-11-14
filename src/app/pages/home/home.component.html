@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  @defer (when (isVisiting)) {
+    <app-movie-detail [chacacters]="movies"></app-movie-detail>
+
+  }@placeholder (minimum 200ms) {
+  <p>Placeholder content</p>
+  }@loading (minimum 60s) { Cargando la información desde el servicio }@error {
+  <p>Algo paso que no funciona</p>
+  }
+</div>
